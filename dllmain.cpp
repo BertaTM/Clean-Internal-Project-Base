@@ -25,14 +25,14 @@ void shutdown(FILE* pFile, std::string reason)
 
 DWORD WINAPI Func(HINSTANCE hModule)
 {
- AllocConsole();
- FILE* filePointer;
- freopen_s(&filePointer, "CONOUT$", "w", stdout);
+	AllocConsole();
+ 	FILE* filePointer;
+ 	freopen_s(&filePointer, "CONOUT$", "w", stdout);
  
- //...
+ 	//...
  
- shutdown(filePointer, "reason");
- return 0;
+ 	shutdown(filePointer, "reason");
+ 	return 0;
 }
 
 //================================ENTRY POINT================================
